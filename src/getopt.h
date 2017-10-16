@@ -15,16 +15,22 @@
 /* All the headers include this file. */
 #include <crtdefs.h>
 
+#if defined( BUILDING_WINGETOPT_DLL )
+#define WINGETOPT_API __declspec(dllexport)
+#else
+#define WINGETOPT_API __declspec(dllimport)
+#endif
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-extern int optind;		/* index of first non-option in argv      */
-extern int optopt;		/* single option character, as parsed     */
-extern int opterr;		/* flag to enable built-in diagnostics... */
+WINGETOPT_API extern int optind;		/* index of first non-option in argv      */
+WINGETOPT_API extern int optopt;		/* single option character, as parsed     */
+WINGETOPT_API extern int opterr;		/* flag to enable built-in diagnostics... */
 				/* (user may set to zero, to suppress)    */
 
-extern char *optarg;		/* pointer to argument of current option  */
+WINGETOPT_API extern char *optarg;		/* pointer to argument of current option  */
 
 extern int getopt(int nargc, char * const *nargv, const char *options);
 

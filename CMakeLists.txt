@@ -7,6 +7,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src)
 
 if(BUILD_SHARED_LIBS)
   set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+  add_definitions(-DBUILDING_WINGETOPT_DLL)
 endif()
 
 add_library(wingetopt src/getopt.c src/getopt.h)
