@@ -15,10 +15,14 @@
 /* All the headers include this file. */
 #include <crtdefs.h>
 
-#if defined( BUILDING_WINGETOPT_DLL )
-#define WINGETOPT_API __declspec(dllexport)
+#if defined( WINGETOPT_SHARED_LIB )
+# if defined( BUILDING_WINGETOPT_DLL )
+#  define WINGETOPT_API __declspec(dllexport)
+# else
+#  define WINGETOPT_API __declspec(dllimport)
+# endif
 #else
-#define WINGETOPT_API __declspec(dllimport)
+# define WINGETOPT_API
 #endif
 
 #ifdef __cplusplus
