@@ -3,7 +3,7 @@
 getopt library for Windows compilers
 
 
-This library was created to allow compilation linux-based software on Windows.
+This library was created to allow compilation Linux-based software on Windows.
 http://en.wikipedia.org/wiki/Getopt
 
 The sources were taken from MinGW-runtime project.
