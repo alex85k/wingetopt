@@ -14,10 +14,10 @@ endif()
 
 add_library(wingetopt src/getopt.c src/getopt.h)
 
-install(FILES src/getopt.h DESTINATION include)
-
-install(TARGETS wingetopt
-    RUNTIME DESTINATION bin
-	LIBRARY DESTINATION lib
-	ARCHIVE DESTINATION lib)
+#install(FILES src/getopt.h DESTINATION include)
+#
+#install(TARGETS wingetopt
+#    RUNTIME DESTINATION bin
+#	LIBRARY DESTINATION lib
+#	ARCHIVE DESTINATION lib)
 
