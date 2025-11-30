@@ -33,7 +33,10 @@ wingetopt_lib = library(
     'src',
   ),
   c_args: c_args,
+  install: true,
 )
+
+install_headers('src/getopt.h')
 
 wingetopt_dep = declare_dependency(
   link_with: wingetopt_lib,
