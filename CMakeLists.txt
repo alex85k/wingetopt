@@ -17,10 +17,10 @@ target_include_directories(wingetopt PUBLIC
     $<INSTALL_INTERFACE:include>
 )
 # Definitions
-target_compile_definitions(wingetopt PRIVATE -D_CRT_SECURE_NO_WARNINGS)
+target_compile_definitions(wingetopt PRIVATE _CRT_SECURE_NO_WARNINGS)
 if(BUILD_SHARED_LIBS)
     set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
-    target_compile_definitions(wingetopt PRIVATE -DBUILDING_WINGETOPT_DLL -DWINGETOPT_SHARED_LIB)
+    target_compile_definitions(wingetopt PRIVATE BUILDING_WINGETOPT_DLL WINGETOPT_SHARED_LIB)
 endif()
 
 # Install headers
